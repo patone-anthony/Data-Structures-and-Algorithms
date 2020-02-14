@@ -62,9 +62,20 @@ class LinkedList:
 
             head_node = head_node.next
 
+
     def reverse_list(self):
+        prev = None
+        curr = self.head
+        next_node = curr.next
 
+        while curr:
+            curr.next = prev
+            prev = curr
+            curr = next_node
+            if next_node:
+                next_node = next_node.next
 
+        self.head = prev
 
 
 list1 = LinkedList()
@@ -81,5 +92,5 @@ list1.insert_between(list1.head.next.next.next, 'Thurs')
 
 list1.list_print()
 print('\n')
-list1.remove_node("Fri")
+list1.reverse_list()
 list1.list_print()
