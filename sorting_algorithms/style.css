@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.container {
+  height: 100px;
+}
+
+.sketch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+canvas {
+  display: block;
+  position: relative;
+  width: 90vw;
+  height: 60vh;
+}
