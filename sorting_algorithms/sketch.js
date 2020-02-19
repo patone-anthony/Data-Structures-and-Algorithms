@@ -16,7 +16,6 @@ function setup() {
     values[i] = random(0, height);
     states[i] = -1;
   }
-  quickSort(values, 0, values.length - 1);
 }
 
 function centerCanvas() {
@@ -26,13 +25,16 @@ function centerCanvas() {
 }
 
 function windowResized() {
-  setup();
-  resizeCanvas(windowWidth * 0.9, windowHeight / 2);
+  //   setup();
+  //   resizeCanvas(windowWidth * 0.9, windowHeight / 2);
 
   centerCanvas();
 }
 
 canvas.parent("sketch-container");
+
+// refresh page on resize
+
 // end formatting
 
 function draw() {

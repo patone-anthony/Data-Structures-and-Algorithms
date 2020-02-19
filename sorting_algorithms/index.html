@@ -4,17 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/addons/p5.sound.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
 
   <body>
     <div class="container">
-      <div class="sketch-container">
-        <script src="sketch.js"></script>
+      <div class="control-panel">
+        <div class="dropdown m-1">
+          <button
+            class="btn btn-info dropdown-toggle"
+            type="button"
+            data-toggle="dropdown"
+          >
+            Chose Sorting Algorithm <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Quicksort</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+          </ul>
+        </div>
+
+        <button class="btn btn-primary m-1" id="quick-sort-button">
+          Click to run
+        </button>
+        <button class="btn btn-danger m-1" id="reset-button">Reset</button>
       </div>
+      <div class="sketch-container"></div>
     </div>
+
+    <script src="sketch.js"></script>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
